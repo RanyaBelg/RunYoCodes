@@ -1,0 +1,732 @@
+/* max-width ---> if the scree size IS OR LESS THEN , then ... */
+/* min-width ---> if the screen size is MORE THAN , then ... */
+/*== Start Global styles ==*/
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+
+@font-face {
+    font-family: 'Redline-Semi-Italic';
+    src:url('webfonts_Redline-Semi-Italic/Redline-Semi-Italic.ttf.woff') format('woff'),
+        url('webfonts_Redline-Semi-Italic/Redline-Semi-Italic.ttf.svg#Redline-Semi-Italic') format('svg'),
+        url('webfonts_Redline-Semi-Italic/Redline-Semi-Italic.ttf.eot'),
+        url('webfonts_Redline-Semi-Italic/Redline-Semi-Italic.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	padding: 0;
+	background: url('images/background.png') center;
+	background-attachment: fixed;
+	background-size: 880px 590px;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+	min-width: 460px;
+
+}
+.d-grid, .d-grid-2{
+	display: grid;
+}
+.d-grid-2{
+	grid-template-columns: 1fr 1fr;
+}
+.text-center{
+	text-align: center;
+}
+.div-center{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+.text-right{
+	text-align: right;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+button{
+	border: none;
+}
+button, input, textarea{
+	outline: none;
+	padding: 5px;
+	margin: 2px;
+
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+.social-media ul{
+	list-style: none;
+	display: flex;
+}
+.social-media ul li{
+	margin-left: 15px;
+}
+.social-media ul li:first-child{
+	margin-left: 0;
+}
+
+
+/*== End Global styles ==*/
+
+/*== Start Header ==*/
+	header, .text-center.div-center{
+		padding: 25px;
+		/* media small screens */
+		background-size: 880px 590px;
+		background-repeat: no-repeat;
+		font-size: 36px;
+		font-weight: 900;		
+
+		}
+
+	.header-top{
+		font-size: 24px;
+	}
+	.logo{
+		font-family: 'Redline-Semi-Italic';
+	    color: #c023a8;
+	    /*
+	    background-image: -webkit-linear-gradient(#f642a5, #dc31a7, #c023a8, #a11aa8, #7e18a8);
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+	    */
+
+	}
+
+
+
+	.show-more{
+		font-size: 20px;
+		font-weight: 600;
+		height: 40px;
+		line-height: 60px;
+		margin: 30px 30px 40px 30px;
+	}
+	
+/*
+	.menu a{
+		border-radius: 50%;
+
+	}
+	.menu a:hover{
+		color: #fff;
+		border-radius: 100%;
+		background-image: -webkit-linear-gradient(#f642a5, #dc31a7, #c023a8, #a11aa8, #7e18a8);
+		transform: scale(20px, 20px);
+
+	}
+
+*/
+	.menu-expanded{
+		position: absolute;
+	    z-index: 999;
+	    top: 0;
+	    left: 0;
+	    height: 100vh;
+	    width: 100vw;
+	    background: pink;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    transform: translateX(-3000px);
+	}
+	.menu-expanded.show{
+	    transform: translateX(0px);
+
+	}
+	.menu-expanded ul{
+		list-style: none;
+		text-align: left;
+	}
+	.menu-expanded ul li{
+		margin: 20px;
+	}
+	.header-top{
+		z-index: 9999;
+	}
+	.header-center{
+		height: 435px;
+	}
+	
+
+
+/*== End Header ==*/
+/*== Start about ==*/
+	.about{
+		height: 380px;
+		padding: 35px;
+		text-align: center;
+		
+	}
+	.about p{
+		width: 80%;
+
+	}
+	.about h2:first-child{
+		margin: 10px;
+		font-weight: 900;
+
+	}
+
+
+
+
+
+
+
+/*== End about ==*/
+
+
+/*== Start Portfolio ==*/
+	.portfolio.d-grid{
+		height: 585px;
+		grid-template-columns: 1fr 1fr;
+				justify-items:center;
+	}
+	.portfolio img{
+		width: 113%;
+	    max-height: 113%;
+	    align-self: center;
+	    filter: grayscale(1);
+		bottom: 12px;
+		visibility: hidden;
+
+	    
+	}
+	.portfolio h3{
+		margin-bottom: 5px;
+		margin-top: 0;
+
+	}
+	}
+	.portfolio div:hover .portfolio-overlay{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+	.portfolio div:last-child{
+		height: 585px;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		filter: grayscale(1);
+	    background-color: #bcbcbc;
+	    background-image: url(images/mock.png);
+	    background-origin: content-box;
+	    background-position: center;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    padding: 10%;
+	}
+
+	.portfolio div:first-child{
+		width: 80%;
+    	margin: auto;
+		/* media */
+		padding: 3%;
+    	align-items: flex-start;
+}
+	.portfolio div:first-child h3{
+		    font-weight: 900;
+
+	}
+
+
+	
+/*== End Portfolio ==*/
+
+
+/*== Start quote ==*/
+	.quote-section{
+			background-color: transparent;
+		}
+	.quote{
+		height: 490px;
+		text-align: center;
+		font-weight: 600;
+		font-size: 36px;
+		/* media small screens */
+		background-color: transparent;
+	}
+
+
+
+
+/*== End quote ==*/
+
+
+/*== Start team members ==*/
+	/* try to make both sides equal*/
+	.team{
+		padding-top: 45px;
+		padding-bottom: 45px;
+
+	}
+	.team img{
+		width: 100%;
+		max-height: 100%;
+		visibility: hidden;
+	}
+	.team .member-image{
+		filter: grayscale(1);
+	    background-position: center;
+	    background-size: cover;
+	    z-index: 22;
+	    height: 585px;
+
+	}
+	.team .ranya-image{
+	    background-image: url(images/me.jpg);
+	}
+	.team .kenza-image{
+	    background-image: url(images/kenza-picture.jpg);
+	}
+	.team .hako-image{
+	    background-image: url(images/hako.jpg);
+	}
+	
+	.member-about,.contact-info{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		
+	}
+
+	.disappear{
+		display: none;
+	}
+	.member-about{
+		width: 80%;
+		margin: auto;
+		/* media */
+		padding: 3%;
+	}
+	.role{
+		font-weight: 700;
+	}
+	.member-about h2{
+		font-weight: 900;
+		font-size: 26px;
+		margin: 10px 0 10px 0;
+	}
+	.member-about p{
+		margin: 7px 0 12px 0;
+	}
+	
+/*== End team members ==*/
+/*== Start Contact ==*/
+/*== Start Contact info ==*/
+	.contact{
+		height: 490px;
+	}
+
+	.contact-expanded{
+		padding: 45px;
+		/* media change to % */
+		grid-gap: 130px;
+		width: 100%;
+		height: 490px;
+		align-content: center;
+	}
+
+	.contact-expanded div:first-child{
+		/* 85% 15% media medium screen and then 90 10 and then 100 0*/
+		margin-left: 22%;
+	}
+	.contact-expanded div{
+		justify-content: space-between;
+		width: 77%;
+
+
+	}
+	.contact-expanded h2{
+		font-size: 30px;
+		margin: -17px 0 10px 0;
+	}
+	.contact-expanded p{
+		margin: 0px 0 16px 0;
+	}
+	.contact-expanded .help{
+		font-size: 14px;
+		font-weight: 600;
+	}
+	.contact-expanded .our-email{
+		font-size: 21px;
+	    font-weight: 600;
+	    margin: 10px 0 30px 0;
+	}
+	.contact-expanded .help{
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+/*== End Contact info ==*/
+/*== Start Contact form ==*/
+
+	.contact-expanded div:last-child input, .contact-expanded div:last-child textarea{
+		width: 100%;
+		padding: 8px;
+		margin-bottom: 5px;
+		font-family: 'Lato', sans-serif!important;
+	}
+	.contact-expanded div:last-child input::placeholder, .contact-expanded div:last-child textarea::placeholder, {
+		font-family: 'Lato', sans-serif!important;
+	}
+	.contact-expanded div:last-child button{
+		color: #fff;
+		background-color: #000;
+		padding: 8px;
+		width: 99px;
+	}
+
+
+
+
+
+
+/*== End Contact form ==*/
+
+/*== End Contact ==*/
+
+
+footer.d-grid-2{
+	padding: 15px 25px 15px 25px;
+    align-items: center;
+    background-color: #fff;
+
+}
+.d-flex{
+	display: flex;
+	justify-content: flex-end;
+	align-content: center;
+}
+
+.rights{
+	text-align: right;
+	align-items: center;
+
+}
+.rights .logo{
+	margin-left: 10px;
+	text-align: left!important;
+}
+
+/* Start Animations */
+.see {
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 20px;
+    border-left: 1px solid #000;
+    line-height: 76px;
+
+}
+.see {
+	-webkit-animation: slide-top 0.7s infinite linear both;
+	        animation: slide-top 0.7s infinite linear both;
+}
+
+@keyframes slide-top {
+  0% {
+    height: 0px;
+    transform: translateY(0);
+  }
+ 
+  100% {
+    height: 40px;
+    transform: translateY(73px);
+    
+  }
+
+}
+/* End Animations */
+
+.about, .portfolio, .team, .contact-expanded, .portfolio-section{
+	background: #fff;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/*== Start Media queries ==*/
+
+/* max-width ---> if the scree size IS OR LESS THEN , then ... */
+/* min-width ---> if the screen size is MORE THAN , then ... */
+/*== Start header ==*/
+@media only screen and (max-width: 990px){
+	.menu.text-right {
+	    position: fixed;
+	    right: 25px;
+	    height: 50px;
+	    width: 50px;
+	    text-align: center;
+	    line-height: 50px;
+	    background: #fff;
+	    border-radius: 50%;
+}
+}
+/*== End header==*/
+/*== Start about ==*/
+	@media only screen and (max-width: 830px) {
+	.about {
+	    width: 92%;
+	    padding: 3%;
+	    margin: auto;
+	    text-align: justify;
+}
+.about h2:first-child {
+    margin-left: 0;
+}
+}
+/*== Start about ==*/
+
+
+/*== Start portfolio ==*/
+	@media only screen and (max-width: 1200px) {
+	.portfolio div:last-child {
+	    padding: 12%;
+}
+
+}
+	@media only screen and (max-width: 1130px) {
+	.portfolio div:last-child {
+	    padding: 18%;
+}
+
+}
+	@media only screen and (max-width: 1080px) {
+	.portfolio div:last-child {
+	    padding: 21%;
+}
+
+}
+	@media only screen and (max-width: 990px) {
+	.portfolio div:last-child {
+	    padding: 7%;
+    	height: 400px;
+
+}
+	.portfolio.d-grid{
+		height: 400px;
+	}
+.portfolio div:first-child{
+		width: 92%;
+	}
+
+}
+	@media only screen and (max-width: 880px) {
+	.portfolio div:last-child {
+	    padding: 17%;
+}
+	.portfolio.d-grid .div-center{
+		height: 320px;
+	}
+	.portfolio-section{
+		height: 720px;
+		text-align: justify;
+	}
+
+	.portfolio div:first-child{
+		align-items: center;
+	}
+
+
+}
+	@media only screen and (max-width: 730px) {
+	.portfolio div:last-child {
+	    padding: 14%;
+}
+
+
+}
+	@media only screen and (max-width: 630px) {
+	.portfolio div:last-child {
+	    padding: 11%;
+}
+
+
+}
+	@media only screen and (max-width: 530px) {
+	.portfolio div:last-child {
+	    padding: 3%;
+}
+
+
+}
+/*== End portfolio ==*/
+
+/*== Start team ==*/
+	@media only screen and (max-width: 1330px) {
+	
+}
+	@media only screen and (max-width: 830px) {
+    .disappear{
+		display: block;
+	}
+	.appear{
+		display: none;
+	}
+	}
+
+	@media only screen and (max-width: 990px) {
+    .member-about {
+    width: 92%;
+}
+	.team .member-image {
+	    height: 520px;
+	    }
+	.team .member-about{
+		padding-bottom: 45px;
+		padding-top: 45px;
+		height: 520px;
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*== End team ==*/
+
+
+
+/*== Start menu-expanded to footer ==*/
+
+@media only screen and (max-width: 1200px) {
+  .contact-expanded{
+  	grid-gap: 35px;
+  }
+  .contact-expanded div:first-child {
+    margin-left: 10%;
+   }
+  .contact-expanded div {
+    justify-content: space-between;
+    width: 90%;
+   }
+}
+@media only screen and (max-width: 990px) {
+  .contact-expanded{
+  	grid-gap: 40px;
+ 	  }
+  .contact-expanded div:first-child {
+    margin-left: 0%;
+  	 }
+  .contact-expanded div {
+    justify-content: space-between;
+    width: 100%;
+ 	  }
+   .contact-expanded h2 {
+    margin: -23px 0 10px 0;
+	}
+}
+@media only screen and (max-width: 880px) {
+  .contact-expanded{
+  	padding: 0 25px 0 25px;
+  	grid-gap: 20px;
+ 	 }
+  .contact-expanded div {
+    justify-content: start;
+	}
+  .contact-expanded h2 {
+    margin-bottom: 15px;
+	}
+	.contact-expanded .our-email {
+    
+    margin: 15px 0 25px 0;
+	}
+  .contact-expanded p {
+    margin: 6px 0 16px 0;
+  }
+}
+@media only screen and (max-width: 830px) {
+	.portfolio-section .d-grid, .team-section .d-grid, .portfolio-section .d-grid-2, .team-section .d-grid-2, .contact-expanded.d-grid-2 {
+    display: block;
+     }
+	
+	.contact-expanded {
+    padding: 25px;
+    height: auto;
+	}
+	.contact-expanded > div {
+    justify-content: space-between;
+    width: 92%;
+    margin: auto;
+    
+   }
+   .contact-expanded div:first-child {
+    margin: auto;
+    padding-bottom: 25px;
+   }
+   .contact-expanded h2 {
+    margin: 0px 0 10px 0;
+   }
+}
+@media only screen and (max-width: 640px) {
+
+	.contact-expanded > div {
+    width: 90%;
+    
+   }
+}
+@media only screen and (max-width: 540px) {
+
+	.contact-expanded > div {
+    width: 95%;
+    
+   }
+}
+	@media only screen and (max-width: 530px) {
+	footer.d-grid-2 {
+	    display: block;
+	    text-align: left;
+	    width: 94%; 
+	    margin: auto;
+}
+	.d-flex.rights{
+		justify-content: center;
+		margin: 30px auto 10px auto;
+		text-align: center;
+	}
+
+/*== End menu-expanded to footer ==*/
+
+
+
+
+/* start portfolio */
+
+/* End portfolio */
+
+
+
+
+
+
+
+
+
+
+/*== End Media queries ==*/
